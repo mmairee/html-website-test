@@ -3,97 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Title</title>
+    <title>Kentucky Airports</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background-color: #c7c7c7;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .content {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .content h2 {
             color: #333;
         }
-        .image-container {
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
             text-align: center;
+            padding: 20px 0;
+            background-image: url('header-image.jpg');
+            background-size: cover;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .image-container img {
+        .section p {
+            line-height: 1.6;
+        }
+        .section img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
+            display: block;
+            margin: 0 auto 20px;
         }
-        .footer {
-            background-color: #333;
-            color: #fff;
+        .section a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .section a:hover {
+            text-decoration: underline;
+        }
+        footer {
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Let's Explore Airports in Kentucky!</h1>
-        <p>Slideshow showcasing the three airports located within Kentucky, along with a visualized change of Lexington's Bluegrass Airport</p>
-    </div>
+    <header>
+        <h1>Exploring Airports in Kentucky, USA</h1>
+        <p>Three airports located within Kentucky, along with a visualized change of Lexington's Bluegrass Airport 
+            and a Shaded Relief Visualization of Cinncinati International Airport</p>
+    </header>
     <div class="container">
-      <div class="left-column">
-        <h3>Description</h3>
-        <p>
-          Kentucky has three main airports. Bluegrass Airport (LEX), Louisville Muhammad Ali International Airport (SDF), & Cinncinnati International Airport (SDF)
-          They serve as hubs of travel for people to be able to travel faster to places far from Kentucky. 
-        </p>
+        <div class="section">
+            <h2>About Kentucky's three main airports</h2>
+            <p>Kentucky has three main airports. Bluegrass Airport (LEX), Louisville Muhammad Ali International Airport (SDF), & Cinncinnati International Airport (SDF)
+            They serve as hubs of travel for people to be able to travel faster to places far from Kentucky. </p>
+            <p>The goal of this project is to show how unique each airport is built and how their structure is 
+            differentiated based on how busy and the demand is for people to travel depending on the location.</p>
 
         <p>
-          The goal of this project is to show how unique each airport is built and how their structure is 
-          differentiated based on how busy and the demand is for people to travel depending on the location.
-        </p>
-
-        <p>
-          Visualizations created from lidar data provided by
-          <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in ArcGIS Pro and
-          Blender. Additional sources of information from KyFromAbove Phase 2 lidar, 2019,
-          KyFromAbove Phase 2 lidar, 2023,
-          NAIP aerial imagery, 2020, 
-          NAIP aerial imagery, 2022,
-          GPS data and photography collected on-site, 2024
-          <a href="https://...">name of source</a>, April, 2023.
-        </p>
-
-        <p>
-          Page and visualizations created by Maire Birdwell for GEO 409, Department of
-          Geography, University of Kentucky. Spring 2024.
-        </p>
-
-    <div class="content">
-      <div class="right-column"></div>
-        <h2>360 degree animation of Louisville Muhammad Ali International Airport Point Cloud</h2>
-            <img src="SDF.gif" alt="SDF GIF">
+            Visualizations created from lidar data provided by
+            <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in ArcGIS Pro and
+            Blender. Additional sources of information from KyFromAbove Phase 2 lidar, 2019,
+            KyFromAbove Phase 2 lidar, 2023,
+            NAIP aerial imagery, 2020, 
+            NAIP aerial imagery, 2022,
+            GPS data and photography collected on-site, 2024
+            <a href="https://...">name of source</a>, April, 2023.
+          </p>
+  
+          <p>
+            Page and visualizations created by Maire Birdwell for GEO 409, Department of
+            Geography, University of Kentucky. Spring 2024.
+          </p>
+        </div>
+        <div class="section">
+         <div class="section">
+            <h2>3D Presentation</h2>
+            <div id="cesiumContainer" style="width: 100%; height: 500px; background-color: #eee;"></div>
+            <iframe title="GEO 409: Final Project" width="1024" height="576" src="https://ion.cesium.com/stories/viewer/?id=b49c1074-2b28-4abc-89a1-832d4a3ba736" frameborder="0" allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+        <div class="section">
+            <h2>SDF 360 Degree Pont Cloud Tour GIF</h2>
+            <p>360 degree animation of Louisville Muhammad Ali International Airport.</p>
+            <img src="SDF.gif" alt="SDF 360">
+        </div>
+        <div class="section">
+            <h2>Visualized Change of Bluegrass Airport from 2010 to 2019</h2>
+            <img src="ChangeLayout2.jpg" alt="Bluegrass Map">
+        </div>
+        <div class="section">
+            <h2>Shaded Relief of Cinncinati/Northern Kentucky International Airport</h2>
+            <img src="ShadedLayout.jpg" alt="Shaded Relief of CVG">
         </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 Test Information. All rights reserved.</p>
-    </div>
+    <footer>
+        <p>Made by Maire Birdwell for GEO 409 with Boyd Shearer at the University of Kentucky</p>
+        <hr />
+        <img src="logo-color-400px.png" alt="UKy Arts and Sciences  " width="300px">    
+    </footer>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.71/Build/Cesium/Cesium.js"></script>
+    <script>
+        Cesium.Ion.defaultAccessToken = 'your-access-token-here';
+        var viewer = new Cesium.Viewer('cesiumContainer');
+    </script>
 </body>
 </html>
